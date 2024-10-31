@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frases Memorables de Deadpool</title>
+  <script src="../js/script.js"></script>
+</head>
+<body>
+
+  <script>
+    let titulo = crearElementoConTexto('h1', 'Frases memorables de Deadpool');
+
+    let descripcion = crearElementoConTexto('p', 'Deadpool es conocido por su ingenio rápido y su sentido del humor único. Aquí hay algunas de sus frases más memorables:');
+    let subtituloCitas = crearElementoConTexto('h2', 'Citas Famosas');
+    
+    let listaCitas = crearElemento('ul');
+    let cita1 = crearElementoConTexto('li', '"Maximum effort!"');
+    let cita2 = crearElementoConTexto('li', `"I'm about to do you what Limp bizkit did to music in the late '90s."`);
+    let cita3 = crearElementoConTexto('li', `"You're probably thinking, ‘This was a superhero movie but that guy in the suit just turned that other guy into a kebab!’"`);
+
+    let nota = crearElemento('p');
+    let notaEnfasis = crearElementoConTexto('strong', 'Nota:');
+    let textoNota = document.createTextNode(' Cada una de estas frases captura perfectamente el espíritu sarcástico y subversivo de Deadpool.');
+
+    agregarElementoAContenedor(notaEnfasis, nota);
+    agregarElementoAContenedor(textoNota, nota);
+
+    let subtituloVideo = crearElementoConTexto('h2', 'Video de las Mejores Escenas');
+
+    let videoEscenas = crearVideo('../resource/videoplayback.mp4', 'Deadpool Mejores Escenas');
+
+    agregarElementoAContenedor(cita1, listaCitas);
+    agregarElementoAContenedor(cita2, listaCitas);
+    agregarElementoAContenedor(cita3, listaCitas);
+
+    agregarElementoAlBody(titulo);
+    agregarElementoAlBody(descripcion);
+    agregarElementoAlBody(subtituloCitas);
+    agregarElementoAlBody(listaCitas);
+    agregarElementoAlBody(nota);
+    agregarElementoAlBody(subtituloVideo);
+    agregarElementoAlBody(videoEscenas);
+  </script>
+  
+</body>
+</html>

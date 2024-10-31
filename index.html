@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Principal</title>
+  <script src="js/script.js"></script>
+  <meta name="author" content="Sebastian Andres Blanco Sanchez" >
+</head>
+<body>
+  
+  <script>
+    let tituloPrincipal = crearElementoConTexto('h1', 'Bienvenido al sitio web de Deadpool');
+
+    let parrafoIntro = crearElementoConTexto('p', 'Explora las siguientes páginas para conocer más sobre Deadpool y sus frases memorables.');
+    let tituloMenu = crearElementoConTexto('h2', 'Menú de Navegación');
+    let listaMenu = crearElemento('ul');
+
+    let itemMenu1 = crearElementoConTexto('li', "");
+    let enlacePersonajes = crearElementoConTexto('a', 'Personajes principales');
+    enlacePersonajes.href = 'html/ejercicio1.html';
+    agregarElementoAContenedor(enlacePersonajes, itemMenu1);
+
+    let itemMenu2 = crearElementoConTexto('li', '');
+    let enlaceBiografia = crearElementoConTexto('a', 'Biografía');
+    enlaceBiografia.href = 'html/ejercicio2.html';
+    agregarElementoAContenedor(enlaceBiografia, itemMenu2);
+
+    let tituloSeccion = crearElementoConTexto('h2', '¿Quién es Deadpool?');
+    let parrafoSeccion = crearElementoConTexto('p', 'Deadpool, también conocido como ');
+    let nombreDeadpool = crearElementoConTexto('strong', 'Wade Wilson');
+    let textoDescripcion = document.createTextNode(', es un anti-héroe de Marvel conocido por su humor sarcástico y sus habilidades de combate.');
+
+    agregarElementoAContenedor(nombreDeadpool, parrafoSeccion);
+    parrafoSeccion.appendChild(textoDescripcion);
+    let imagenDeadpool = crearImagen('resource/imagen1.jpg', 'Deadpool');
+    imagenDeadpool.style.width = '300px';
+    
+    agregarElementoAContenedor(itemMenu1, listaMenu);
+    agregarElementoAContenedor(itemMenu2, listaMenu);
+
+    agregarElementoAlBody(tituloPrincipal);
+    agregarElementoAlBody(parrafoIntro);
+    agregarElementoAlBody(tituloMenu);
+    agregarElementoAlBody(listaMenu);
+    agregarElementoAlBody(tituloSeccion);
+    agregarElementoAlBody(parrafoSeccion);
+    agregarElementoAlBody(imagenDeadpool);
+  </script>
+</body>
+</html>
